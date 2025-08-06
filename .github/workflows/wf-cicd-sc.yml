@@ -26,14 +26,14 @@ jobs:
           cat << EOF > connections.toml
           [ci_connection]
           account = "${{ secrets.SNOWFLAKE_ACCOUNT }}"
-          user = "${{ secrets.SNOWFLAKE_USER }}"
+          user = "${{ secrets.SNOWFLAKE_USERNAME }}"
           password = "${{ secrets.SNOWFLAKE_PASSWORD }}"
           role = "${{ secrets.SNOWFLAKE_ROLE }}"
           warehouse = "${{ secrets.SNOWFLAKE_WAREHOUSE }}"
           database = "${{ secrets.SNOWFLAKE_DATABASE }}"
           schema = "${{ secrets.SNOWFLAKE_SCHEMA }}"
           EOF
-          
+    
       - name: Set permissions for connections.toml
         run: chmod 600 connections.toml
         

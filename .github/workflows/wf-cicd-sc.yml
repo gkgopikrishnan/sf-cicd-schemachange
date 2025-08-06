@@ -36,6 +36,9 @@ jobs:
           
       - name: Set permissions for connections.toml
         run: chmod 600 connections.toml
+        
+      - name: Debug connections.toml
+        run: cat connections.toml
 
       - name: Run schemachange
         run: |

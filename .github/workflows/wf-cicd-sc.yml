@@ -37,7 +37,7 @@ jobs:
       - name: Run schemachange
         run: |
           schemachange \
-            -f ./scripts \
+            -f ./sql \
             --connection-name ci_connection \
             --connections-file-path ./connections.toml \
             --create-change-history-table

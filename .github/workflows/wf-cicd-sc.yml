@@ -33,6 +33,9 @@ jobs:
           database = "${{ secrets.SNOWFLAKE_DATABASE }}"
           schema = "${{ secrets.SNOWFLAKE_SCHEMA }}"
           EOF
+          
+      - name: Set permissions for connections.toml
+        run: chmod 600 connections.toml
 
       - name: Run schemachange
         run: |
